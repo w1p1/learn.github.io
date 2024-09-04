@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c++</title>
+</head>
+<body>
+    <div class="title">c++的杂乱记录</div>
+    <div class="sidebar">  
+        <!-- 侧边栏内容 -->  
+        <h2 style="text-align: center;">导航</h2>  
+        <ul>
+          <li><a href="../index.html" id="homeLink">主页</a></li>    
+          <li><a href="html\c++.html">c++</a></li>  
+          <li><a href="html\数据结构.html">数据结构</a></li>  
+          <li><a href="html\数字逻辑.html">数字逻辑</a></li>  
+        </ul>  
+    </div>  
+    <div class="main-content">  
+        
+    </div>        
+    <style>
+         body
+        {
+            background: linear-gradient(to right, rgb(191, 222, 191), white);
+        }
+        .title{
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+        .sidebar {  
+            height: 80%; /* 侧边栏高度为100% */  
+            width: 150px; /* 侧边栏宽度 */  
+            position: fixed; /* 侧边栏位置固定 */  
+            z-index: 1; /* 确保侧边栏在其他内容之上 */  
+            top: 10%; /* 侧边栏顶部对齐 */  
+            left: 0; /* 侧边栏左侧对齐 */  
+            background-color: #f1f1f1; /* 侧边栏背景色 */  
+            overflow-x: hidden; /* 禁止水平滚动 */  
+            padding: 20px;  
+            border-radius: 2%;
+        }  
+  
+        .main-content {  
+            margin-left: 200px; /* 主内容区域左边距等于侧边栏宽度 */  
+            padding: 20px;  
+            height: 1500px; /* 示例高度，用于创建滚动效果 */  
+        }  
+  
+        /* 侧边栏链接样式 */  
+        .sidebar a {  
+            padding: 8px 16px;  
+            text-decoration: none;  
+            font-size: 20px;  
+            color: #818181;  
+            display: block;  
+        }  
+  
+        /* 侧边栏链接悬停样式 */  
+        .sidebar a:hover {  
+            color: #f1f1f1;  
+            background-color: #555;  
+        }
+        
+    </style>
+
+<script>  
+    document.getElementById('c++').addEventListener('click', function(event) {  
+      event.preventDefault();  
+      // 这里可以添加其他逻辑，比如显示一个模态框或改变页面上的某些元素  
+    });  
+  </script>
+</body>
+</html>

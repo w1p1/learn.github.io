@@ -6,6 +6,120 @@
     <title>大学学习</title>
 </head>
 <body>
-    <div>nihadfowe</div>
+    <div class="title">命题1的大学学习笔记</div>
+    <div class="sidebar">  
+        <!-- 侧边栏内容 -->  
+        <h2 style="text-align: center;">导航</h2>  
+        <ul>
+          <li><a href="index.html">主页</a></li>  
+          <li><a href="html\c++.html">c++</a></li>  
+          <li><a href="html\数据结构.html">数据结构</a></li>  
+          <li><a href="html\数字逻辑.html">数字逻辑</a></li>  
+        </ul>  
+    </div>  
+    <div class="main-content">  
+        <div>
+            <button class="accordion">man</button>
+    <div class="panel">
+        <p>无聊，不知道这里干嘛，但又想写点东西</p>
+    </div>
+
+    <button class="accordion">what can i say</button>
+    <div class="panel">
+        <p>有个秘密偷偷告诉你</p>
+    </div>
+
+    <button class="accordion">damn</button>
+    <div class="panel">
+        <p>乱星海有陨落心炎</p>
+    </div>
+        </div>
+    </div>        
+    <style>
+        button.accordion {
+            background-color: #eee; /* 按钮的背景颜色 */
+            color: #444; /* 按钮的文字颜色 */
+            cursor: pointer; /* 鼠标悬停时显示为手指图标 */
+            padding: 18px; /* 按钮的内边距 */
+            width: 100%; /* 按钮的宽度 */
+            border: none; /* 按钮的边框 */
+            text-align: left; /* 按钮文字左对齐 */
+            outline: none; /* 移除按钮的轮廓 */
+            font-size: 15px; /* 按钮文字的大小 */
+            transition: 0.4s; /* 按钮状态变化的过渡效果 */
+        }
+
+        button.accordion.active, button.accordion:hover {
+            background-color: #ddd; /* 按钮在激活或悬停时的背景颜色 */
+        }
+
+        div.panel{
+            padding: 0 18px; /* 内容区域的内边距 */
+            background-color: white; /* 内容区域的背景颜色 */
+            max-height: 0; /* 内容区域的最大高度 */
+            overflow: hidden; /* 超出内容区域的部分隐藏 */
+            transition: max-height 0.2s ease-out; /* 内容区域展开和折叠的过渡效果 */
+        }
+         body
+        {
+            background: linear-gradient(to right, rgb(191, 222, 191), white);
+        }
+        .title{
+            font-size: 30px;
+            color: black;
+            text-align: center;
+        }
+        .sidebar {  
+            height: 80%; /* 侧边栏高度为100% */  
+            width: 150px; /* 侧边栏宽度 */  
+            position: fixed; /* 侧边栏位置固定 */  
+            z-index: 1; /* 确保侧边栏在其他内容之上 */  
+            top: 10%; /* 侧边栏顶部对齐 */  
+            left: 0; /* 侧边栏左侧对齐 */  
+            background-color: #f1f1f1; /* 侧边栏背景色 */  
+            overflow-x: hidden; /* 禁止水平滚动 */  
+            padding: 20px;  
+            border-radius: 2%;
+        }  
+  
+        .main-content {  
+            margin-left: 200px; /* 主内容区域左边距等于侧边栏宽度 */  
+            padding: 20px;  
+            height: 1500px; /* 示例高度，用于创建滚动效果 */  
+        }  
+  
+        /* 侧边栏链接样式 */  
+        .sidebar a {  
+            padding: 8px 16px;  
+            text-decoration: none;  
+            font-size: 20px;  
+            color: #818181;  
+            display: block;  
+        }  
+  
+        /* 侧边栏链接悬停样式 */  
+        .sidebar a:hover {  
+            color: #f1f1f1;  
+            background-color: #555;  
+        }
+        
+    </style>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px"; // 展开内容区域到其实际高度
+                } 
+            }
+        );
+        }
+    </script>
 </body>
 </html>
